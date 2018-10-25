@@ -81,11 +81,11 @@ public class Conta {
         System.out.println("\nNome: " + nome + "\nConta: " + conta + "\nSaldo: " + saldo);
     }
 
-    public void transferencia(Conta origen, double importe){
+    public void transferencia(Conta origen, double importe) {
         reintegroSaldo(importe);
         origen.ingresoSaldo(importe);
     }
-    
+
 //    public boolean transferencia(Conta origen, double importe) {
 //        boolean correcto = true;
 //        if (importe < 0) {
