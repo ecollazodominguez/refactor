@@ -14,8 +14,8 @@ public class Consumo {
     //atributos
     private float km;
     private float litros;
-    private float vMed;
-    private float pGas;
+    private float velo_Med;
+    private float precioGas;
 
     //constructores
     public Consumo() {
@@ -25,23 +25,23 @@ public class Consumo {
     public Consumo(float km, float litros, float vMed, float pGas) {
         this.km = km;
         this.litros = litros;
-        this.vMed = vMed;
-        this.pGas = pGas;
+        this.velo_Med = vMed;
+        this.precioGas = pGas;
 
     }
 
     //metodos de acceso
     public float getTempo() {
-        return vMed / km;
+        return velo_Med / km;
     }
 
-    public float consumoMedio() {
+    public float calcularConsumoMedio() {
         return litros * 100 / km;
 
     }
 
-    public float consumoEuros() {
-        return pGas * (litros * 100 / km);
+    public float calcularConsumoEuros() {
+        return precioGas * (litros * 100 / km);
 
     }
 
@@ -54,18 +54,18 @@ public class Consumo {
 
     }
 
-    public void setvMed(float vMed) {
-        this.vMed = vMed;
+    public void setVelo_Med(float velo_Med) {
+        this.velo_Med = velo_Med;
 
     }
 
     public void setPGas(float pGas) {
-        this.pGas = pGas;
+        this.precioGas = pGas;
 
     }
 
-    public void vMed() {
-        System.out.println("A velocidade media é de: " + vMed + " km/h");
+    public void MostrarVelo_Med() {
+        System.out.println("A velocidade media é de: " + velo_Med + " km/h");
 
     }
 }
