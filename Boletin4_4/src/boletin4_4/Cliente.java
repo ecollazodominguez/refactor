@@ -2,34 +2,34 @@ package boletin4_4;
 
 public class Cliente {
 
-    private float polbo;
-    private float patacas;
+    private float kgPolbo;
+    private float kgPatacas;
 
     public void engadirPolbo(int po) {
-        polbo = polbo + po;
+        kgPolbo = kgPolbo + po;
     }
 
     public void engadirPatacas(int pa) {
-        patacas = patacas + pa;
+        kgPatacas = kgPatacas + pa;
     }
 
     public void amosarPolbo() {
-        System.out.println("Na despensa hai: " + polbo + " kg de polbo.");
+        System.out.println("Na despensa hai: " + kgPolbo + " kg de polbo.");
     }
 
     public void amosarPatacas() {
-        System.out.println("Na despensa hai: " + patacas + " kg de patacas.");
+        System.out.println("Na despensa hai: " + kgPatacas + " kg de patacas.");
     }
 
     public void calcularRacion(float polb, float pata) {
-        polbo = polbo + polb;
-        patacas = patacas + pata;
+        kgPolbo = kgPolbo + polb;
+        kgPatacas = kgPatacas + pata;
         int racion;
         float racionPatacas;
         float racionPolbo;
 
-        racionPatacas = (patacas * 3);
-        racionPolbo = (polbo / 2 * 3);
+        racionPatacas = (kgPatacas * 3);
+        racionPolbo = (kgPolbo / 2 * 3);
 
         if (racionPatacas < racionPolbo) {
             racion = (int) racionPatacas;
