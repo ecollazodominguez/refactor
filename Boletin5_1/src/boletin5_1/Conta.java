@@ -3,7 +3,7 @@ package boletin5_1;
 public class Conta {
 
     private String nome;
-    private String conta;
+    private String numConta;
     private double saldo;
 
     public Conta() {
@@ -12,7 +12,7 @@ public class Conta {
 
     public Conta(String nome, String conta, double saldo) {
         this.nome = nome;
-        this.conta = conta;
+        this.numConta = conta;
         this.saldo = saldo;
     }
 
@@ -20,8 +20,8 @@ public class Conta {
         this.nome = nome;
     }
 
-    public void setConta(String conta) {
-        this.conta = conta;
+    public void setNumConta(String numConta) {
+        this.numConta = numConta;
     }
 
     public void setSaldo(double saldo) {
@@ -32,15 +32,15 @@ public class Conta {
         return nome;
     }
 
-    public String getConta() {
-        return conta;
+    public String getNumConta() {
+        return numConta;
     }
 
     public double getSaldo() {
         return saldo;
     }
 
-    public void ingresoSaldo(double dinero) {
+    public void ingresarSaldo(double dinero) {
         if (dinero <= 0) {
             dinero = 0;
         }
@@ -48,7 +48,7 @@ public class Conta {
 
     }
 
-//    public boolean ingresoSaldo(double dinero) {
+//    public boolean ingresarSaldo(double dinero) {
 //        boolean correcto = true;
 //        if (dinero < 0) {
 //            correcto = false;
@@ -59,14 +59,14 @@ public class Conta {
 //        }
 //        return correcto;
 //    }
-    public void reintegroSaldo(double dinero) {
+    public void retirarSaldo(double dinero) {
         if (dinero <= 0) {
             dinero = 0;
         }
         saldo -= dinero;
     }
 
-//    public boolean reintegroSaldo(double dinero){
+//    public boolean retirarSaldo(double dinero){
 //    boolean correcto = true;
 //       if (dinero < 0){
 //                correcto = false;
@@ -78,12 +78,12 @@ public class Conta {
 //            return correcto;
 //        }
     public void amosarDatos() {
-        System.out.println("\nNome: " + nome + "\nConta: " + conta + "\nSaldo: " + saldo);
+        System.out.println("\nNome: " + nome + "\nConta: " + numConta + "\nSaldo: " + saldo);
     }
 
     public void transferencia(Conta origen, double importe) {
-        reintegroSaldo(importe);
-        origen.ingresoSaldo(importe);
+        retirarSaldo(importe);
+        origen.ingresarSaldo(importe);
     }
 
 //    public boolean transferencia(Conta origen, double importe) {
